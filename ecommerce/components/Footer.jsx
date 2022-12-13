@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <p>
-      2022 JSM Headphones ALL rights reserved
+      2022 OFV Vegtables ALL rights reserved
       </p>
       <p className="icons">
         <AiFillInstagram />
