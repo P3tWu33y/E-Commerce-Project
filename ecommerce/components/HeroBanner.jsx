@@ -1,25 +1,26 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-import { urlFor } from '../lib/client';
+import { urlFor } from "../lib/client";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="hero-banner-container">
       <div>
-        <p className="Cucumbers">{heroBanner.smallText}</
-        p>
+        <img
+          src={urlFor(heroBanner.image)}
+          alt="http://localhost:3000/product/Tomatoe"
+          className="hero-banner-image"
+        />
+      </div>
+
+      <div>
+        <p className="smallText">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-        <img src={urlFor(heroBanner.image)}
-        alt="http://localhost:3000/product/Tomatoe" 
-        className="hero-banner-image" />
-
         <div>
-          <Link href={`/product/${heroBanner.
-            product}`}>
-            <button type="button">{heroBanner.
-            buttonText}</button>
+          <Link href={`/product/${heroBanner.product}`}>
+            <button type="button">{heroBanner.buttonText}</button>
           </Link>
           <div className="desc">
             <h5>Description</h5>
@@ -28,7 +29,7 @@ const HeroBanner = ({ heroBanner }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroBanner
+export default HeroBanner;
