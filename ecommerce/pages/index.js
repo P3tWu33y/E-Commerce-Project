@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroBanner }
 from '../components';
@@ -12,7 +13,7 @@ const Home = ({ products, bannerData }) => (
       <h2>Best Selling Products</h2>
       <p>Many vegetables and fruits for you to choose!</p>
     </div>
-
+     
     <div className="products-container">
       {products?.map((product) => <Product key=
       {product._id} product={product} />)}
@@ -22,7 +23,6 @@ const Home = ({ products, bannerData }) => (
     bannerData[0]} />
   </div>
 );
-
 
 
 export const getServerSideProps = async() => {
